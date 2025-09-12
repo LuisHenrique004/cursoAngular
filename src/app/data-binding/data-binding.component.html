@@ -1,0 +1,124 @@
+<!-- <section class="property-binding"> //Aula #9
+
+    <article> //Aula #9
+        <h3>Interpolation / Interpolação</h3>
+        <p>String renderizada com interpolação {{ url }}</p>
+        <p>1 + 1 = {{ 1+1 }}</p>
+        <p>Resultado de 1 + 1 não é {{ 1 + 1 + getValor() }}</p>
+        <p>Tu gosta do curso Angular? {{ cursoAngular }}</p>
+        <img src="{{ imageUrl }}" alt="">
+        <img [src]="imageUrl" alt="">
+    </article>
+
+</section> -->
+
+<!-- <article> //Aula #10
+
+
+        <h3>Class e Style Binding</h3>
+        <div>
+            Selecione uma classe:
+            <select #classe (change)="0">
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-danger">Perigo</option>
+                <option value="alert-warning">Erro</option>
+                <option value="alert-info">Alerta</option>
+            </select>
+            <br><br>
+    
+            <div class="alert {{ classe.value }}" role="alert">
+                Texto para colorir
+            </div>
+    
+            <br>
+    
+            <div class="alert " role="alert" 
+            [class.alert-success]="classe.value == 'alert-success'">
+                A simple success alert with Give it a click if you like.
+            </div>
+            <div class="alert " role="alert"
+            [class.alert-danger]="classe.value == 'alert-danger'">
+                A simple danger alert with Give it a click if you like.
+            </div>
+            <div class="alert " role="alert"
+            [class.alert-warning]="classe.value == 'alert-warning'">
+                A simple warning alert with Give it a click if you like.
+            </div>
+            <div class="alert " role="alert"
+            [class.alert-info]="classe.value == 'alert-info'">
+                A simple info alert with Give it a click if you like.
+            </div>
+
+            <div class="alert alert-danger" role="alert"
+            [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+                Esse texto só aparece em caso de erro
+            </div>
+        </div>
+    </article> -->
+
+<!-- <section class="event-binding"> //Aula #11
+        <article>
+            <h3>Event binding</h3>
+            <div>
+                <button class="btn btn-primary" (click)="botaoClique()">Clique aqui!!</button>
+
+                <br><br>
+
+                <input type="text" (keyup)="onKeyUp($event)" 
+                #valor (keyup.enter)="salvarValor(valor.value)"
+                    (blur)="salvarValor(valor.value)">
+
+
+                <p>Valor atual: {{ valorAtual }}</p>
+                <p>Valor salvo: {{ valorSalvo }}</p>
+
+                <br>
+
+                <span 
+                (mouseover)="onMouseOverOut()" 
+                (mouseout)="onMouseOverOut()"
+                [class.highlight]="isMouseOver">
+                    Passe o mouse sobre mim
+                </span>
+            </div>
+        </article>
+    </section> -->
+
+<!-- <section class="Two-way-binding"> //Aula #12
+    <article>
+        <h3>Two-way-binding</h3>
+        <div>
+
+            <input type="text"
+            [value]="nome"
+            (input)="nome = dado.value"
+            #dado
+            >
+
+            <input type="text"
+            [ngModel]="nome"
+            (ngModelChange)="nome = $event"
+            #dado>
+
+            <input #dado type="text" 
+            [(ngModel)]="nome">
+
+            <p>você digitou: {{ nome }}</p>
+
+            <br>
+
+            <input type="text" [(ngModel)]="pessoa.nome">
+            <input type="text" [(ngModel)]="pessoa.idade">
+
+            <p>O nome da pessoa é: {{ pessoa.nome }} e a sua idade é {{ pessoa.idade }}</p>
+        </div>
+    </article>
+</section> -->
+
+<section class="input-output-properties">
+    <article>
+        <h3>Input/Output Properties</h3>
+
+        <app-curso [nome]="nomeDoCurso"></app-curso>
+    </article>
+</section>
