@@ -12,6 +12,18 @@ export class AppComponent {
 
   cursos: string[] = [];
 
+  valor: number = 5;
+
+  deletarCiclo: boolean = false;
+
+  mudarValor() {
+    this.valor++
+  }
+
+  destruirCiclo() {
+    this.deletarCiclo = true;
+  }
+
   constructor(private cursosService: CursosService) {
     this.cursos = this.cursosService.getCursos();
 
