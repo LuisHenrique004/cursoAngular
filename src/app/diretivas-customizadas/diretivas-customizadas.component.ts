@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class DiretivasCustomizadasComponent {
 
+  mostrarCursos: boolean = false;
+
+  onMostrarCursos() {
+    this.mostrarCursos = !this.mostrarCursos;
+  }
+
 }
