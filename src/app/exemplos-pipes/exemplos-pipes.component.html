@@ -1,0 +1,11 @@
+<h5>Exemplos de Pipes</h5>
+
+<p>Editora: {{ livro.editora | uppercase | camelCase}}</p>
+<p>Nota: {{ livro.rating | number: '2.1-2'}}</p>
+<p>Idioma: {{ livro.idioma }}</p>
+<p>Páginas: {{ livro.paginas }}</p>
+<p>Preço: {{ livro.preco | currency: 'BRL:':true}}</p>
+
+<br>
+
+<p>Livro: {{ livro }}</p>

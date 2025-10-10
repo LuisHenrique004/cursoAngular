@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +23,9 @@ import { NgElseDirective } from './shared/ng-else.directive';
 import { CursosService } from './cursos/cursos.service';
 import { CriarCursoModule } from './criar-curso/criar-curso.module';
 import { CursoModule } from './cursos/cursos.module';
+import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.component';
+import { CamelCasePipe } from './camel-case.pipe';
+import { SettingsService } from './services/settings.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,9 @@ import { CursoModule } from './cursos/cursos.module';
     DiretivasCustomizadasComponent,
     HighlightMouseDirective,
     HighlightDirective,
-    NgElseDirective
+    NgElseDirective,
+    ExemplosPipesComponent,
+    CamelCasePipe
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,24 @@ import { CursoModule } from './cursos/cursos.module';
     CriarCursoModule,
     CursoModule
   ],
-  providers: [CursosService],
+  providers: [
+    CursosService,
+    /*SettingsService,
+    {
+      provide: LOCALE_ID,
+      deps: [SettingsService],
+      useFactory: (settingsService) => settingsService.getLocale();
+    }*/
+       /*{
+      provide: LOCALE_ID,
+      useValue: 'pt'
+
+    }*/
+
+  ],
+
+
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
