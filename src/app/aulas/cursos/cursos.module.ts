@@ -1,7 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 
-import { CursosService } from "../cursos/cursos.service";
+import { CursosService } from "./cursos.service";
 import { CursosComponent } from "./cursos.component";
 import { CriarCursoModule } from "../criar-curso/criar-curso.module";
 
