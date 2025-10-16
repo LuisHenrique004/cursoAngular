@@ -25,7 +25,7 @@ export class AppComponent {
   }
 
   constructor(private cursosService: CursosService) {
-    this.cursos = this.cursosService.getCursos();
+    //this.cursos = this.cursosService.getCursos();
 
   }
 }

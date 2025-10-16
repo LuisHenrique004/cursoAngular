@@ -1,7 +1,7 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routing } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './aulas/data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
@@ -25,9 +25,12 @@ import { CriarCursoModule } from './aulas/criar-curso/criar-curso.module';
 import { CursoModule } from './aulas/cursos/cursos.module';
 import { ExemplosPipesComponent } from './aulas/exemplos-pipes/exemplos-pipes.component';
 import { CamelCasePipe } from './pipes/camel-case.pipe';
-import { SettingsService } from './services/settings.service';
 import { FilterArrayPipe } from './pipes/filter-array.pipe';
 import { FiltroArrayImpuroPipe } from './pipes/filtro-array-impuro.pipe';
+import { HomeComponent } from './aulas/rotas/home/home.component';
+import { LoginComponent } from './aulas/rotas/login/login.component';
+import { CursosComponent } from './aulas/rotas/cursos/cursos.component';
+import { CursoDetalheComponent } from './aulas/rotas/curso-detalhe/curso-detalhe.component';
 
 @NgModule({
   declarations: [
@@ -50,14 +53,19 @@ import { FiltroArrayImpuroPipe } from './pipes/filtro-array-impuro.pipe';
     ExemplosPipesComponent,
     CamelCasePipe,
     FilterArrayPipe,
-    FiltroArrayImpuroPipe
+    FiltroArrayImpuroPipe,
+    HomeComponent,
+    LoginComponent,
+    CursosComponent,
+    CursoDetalheComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     CriarCursoModule,
-    CursoModule
+    CursoModule,
+    routing
   ],
   providers: [
     CursosService,
