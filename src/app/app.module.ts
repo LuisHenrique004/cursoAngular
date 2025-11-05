@@ -1,4 +1,4 @@
-import { LOCALE_ID, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule, routing } from './app-routing.module';
@@ -30,7 +30,10 @@ import { FiltroArrayImpuroPipe } from './pipes/filtro-array-impuro.pipe';
 import { HomeComponent } from './aulas/rotas/home/home.component';
 import { LoginComponent } from './aulas/rotas/login/login.component';
 import { CursosComponent } from './aulas/rotas/cursos/cursos.component';
-import { CursoDetalheComponent } from './aulas/rotas/curso-detalhe/curso-detalhe.component';
+import { CursoDetalheComponent } from './aulas/rotas/cursos/curso-detalhe/curso-detalhe.component';
+import { CursosRoutingModule } from './aulas/rotas/cursos/cursos.routing.module';
+import { AlunosComponent } from './aulas/rotas/alunos/alunos.component';
+import { AlunosModule } from './aulas/rotas/alunos/alunos.module';
 
 @NgModule({
   declarations: [
@@ -57,7 +60,7 @@ import { CursoDetalheComponent } from './aulas/rotas/curso-detalhe/curso-detalhe
     HomeComponent,
     LoginComponent,
     CursosComponent,
-    CursoDetalheComponent
+    CursoDetalheComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,9 @@ import { CursoDetalheComponent } from './aulas/rotas/curso-detalhe/curso-detalhe
     FormsModule,
     CriarCursoModule,
     CursoModule,
-    routing
+    routing,
+    CursosRoutingModule,
+    AlunosModule
   ],
   providers: [
     CursosService,
