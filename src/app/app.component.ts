@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CursosService } from './services/cursos.service';
+import { AuthService } from './aulas/rotas/login/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,10 @@ import { CursosService } from './services/cursos.service';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'angularCurso';
+
+  mostrarMenu: boolean = false;
 
   cursos: string[] = [];
 
@@ -24,8 +27,13 @@ export class AppComponent {
     this.deletarCiclo = true;
   }
 
-  constructor(private cursosService: CursosService) {
+  constructor(private cursosService: CursosService, private authService: AuthService) {
     //this.cursos = this.cursosService.getCursos();
 
+  }
+  ngOnInit(): void {
+    this.authService.mostrarMenuEmitter.subscribe(
+      mostrar => this.mostrarMenu = mostrar
+    );
   }
 }

@@ -1,4 +1,4 @@
-<ul class="nav nav-tabs">
+<ul *ngIf="mostrarMenu" class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link" aria-current="page" routerLink="">Home</a>
   </li>
@@ -9,7 +9,7 @@
     <a class="nav-link" routerLink="/cursos" [queryParams]="{pagina:1}">Cursos</a>
   </li>
   <li class="nav-item" routerLinkActive="active">
-    <a class="nav-link" [routerLink]="['curso', idCurso.value]">Curso com id</a>
+    <!-- <a class="nav-link" [routerLink]="['curso', idCurso.value]">Curso com id</a> -->
   </li>
   <li class="nav-item" routerLinkActive="active">
     <a class="nav-link" [routerLink]="['/alunos']">Alunos</a>
@@ -17,8 +17,8 @@
 </ul>
 
 <div class="container">
-  <p>Entre com o id do curso</p>
-  <input #idCurso>
+  <!-- <p>Entre com o id do curso</p>
+  <input #idCurso> -->
   <router-outlet></router-outlet>
 </div>
 

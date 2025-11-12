@@ -34,6 +34,7 @@ import { CursoDetalheComponent } from './aulas/rotas/cursos/curso-detalhe/curso-
 import { CursosRoutingModule } from './aulas/rotas/cursos/cursos.routing.module';
 import { AlunosComponent } from './aulas/rotas/alunos/alunos.component';
 import { AlunosModule } from './aulas/rotas/alunos/alunos.module';
+import { AuthService } from './aulas/rotas/login/auth.service';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { AlunosModule } from './aulas/rotas/alunos/alunos.module';
   ],
   providers: [
     CursosService,
+    AuthService
     /*SettingsService,
     {
       provide: LOCALE_ID,

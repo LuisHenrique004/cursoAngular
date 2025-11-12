@@ -13,7 +13,6 @@ const alunosRoutes: Routes = [
     ]
   },
 ];
-
 @NgModule({
   imports: [RouterModule.forChild(alunosRoutes)],
   exports: [RouterModule]
